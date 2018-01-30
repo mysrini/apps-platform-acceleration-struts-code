@@ -1,16 +1,7 @@
 package org.superbiz.struts;
 
-import com.opensymphony.module.sitemesh.filter.PageFilter;
-import org.apache.struts2.dispatcher.ActionContextCleanUp;
-import org.apache.struts2.dispatcher.FilterDispatcher;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
-
-import javax.servlet.Filter;
-
-import static java.util.Collections.singletonList;
 
 @SpringBootApplication
 public class Application {
@@ -20,7 +11,7 @@ public class Application {
     }
 
 
-    @Bean
+    /*@Bean
     public FilterRegistrationBean filterDispatcher() {
         return buildFilterRegistration(0, new FilterDispatcher());
     }
@@ -39,8 +30,16 @@ public class Application {
     private FilterRegistrationBean buildFilterRegistration(int order, Filter filter) {
         FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(filter);
-        registration.setUrlPatterns(singletonList("/*"));
+        registration.setUrlPatterns(Arrays.asList(
+                "/decorators/layout.jsp",
+                "/addUser.action",
+                "/addedUser.jsp",
+                "/findUserForm.action",
+                "/findUserForm.jsp",
+                "/listAllUsers.action",
+                "/listAllUsers.jsp"
+        ));
         registration.setOrder(order);
         return registration;
-    }
+    }*/
 }

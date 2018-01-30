@@ -14,20 +14,8 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<title>User Details</title>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<h2>User Details </h2>
-<table>
-    <tr>
-        <td><b>ID</b></td>
-        <td>${user.id }</td>
-    </tr>
-    <tr>
-        <td><b>First Name</b></td>
-        <td>${user.firstName }</td>
-    </tr>
-    <tr>
-        <td><b>Last Name</b></td>
-        <td>${user.lastName }</td>
-    </tr>
-</table>
+<t:layout title="Main page"/>
+
+
